@@ -236,7 +236,7 @@ coding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,gen
   ## Annotation
   Anno.Int.PHRED.sub.category <- Anno.Int.PHRED.sub[lof.in.plof,]
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.id.gene.category,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.id.gene.category,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF[lof.in.plof],
                                              Missing_rate=Missing_rate[lof.in.plof],
@@ -303,7 +303,7 @@ coding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,gen
   ## Annotation
   Anno.Int.PHRED.sub.category <- Anno.Int.PHRED.sub[lof.in.plof,]
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.id.gene.category,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.id.gene.category,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF[lof.in.plof],
                                              Missing_rate=Missing_rate[lof.in.plof],
@@ -366,7 +366,7 @@ coding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,gen
   ## Annotation
   Anno.Int.PHRED.sub.category <- Anno.Int.PHRED.sub[lof.in.synonymous,]
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.id.gene.category,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.id.gene.category,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF[lof.in.synonymous],
                                              Missing_rate=Missing_rate[lof.in.synonymous],
@@ -429,7 +429,7 @@ coding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,gen
   ## Annotation
   Anno.Int.PHRED.sub.category <- Anno.Int.PHRED.sub[lof.in.missense,]
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.id.gene.category,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.id.gene.category,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF[lof.in.missense],
                                              Missing_rate=Missing_rate[lof.in.missense],
@@ -492,7 +492,7 @@ coding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,gen
   ## Annotation
   Anno.Int.PHRED.sub.category <- Anno.Int.PHRED.sub[lof.in.dmissense,]
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.id.gene.category,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.id.gene.category,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF[lof.in.dmissense],
                                              Missing_rate=Missing_rate[lof.in.dmissense],

@@ -5,6 +5,7 @@
 \title{Genotype extraction and filtering for association analysis}
 \usage{
 Genotype_flip_sp_extraction(
+  chr,
   genofile,
   variant.id,
   sample.id,
@@ -20,6 +21,8 @@ Genotype_flip_sp_extraction(
 )
 }
 \arguments{
+\item{chr}{an integer which specifies the chromosome number.}
+
 \item{genofile}{an object of opened annotated GDS (aGDS) file.}
 
 \item{variant.id}{ID of selected variants.}

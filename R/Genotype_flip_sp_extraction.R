@@ -20,6 +20,7 @@
 #' - \code{REF_AF} and \code{Missing_rate} can be efficiently computed using
 #'   \code{SeqArray::seqGetAF_AC_Missing(genofile, minor=FALSE)}.
 #'
+#' @param chr an integer which specifies the chromosome number.
 #' @param genofile an object of opened annotated GDS (aGDS) file.
 #' @param variant.id ID of selected variants.
 #' @param sample.id ID of selected samples.
@@ -41,7 +42,7 @@
 #'
 #' @export
 
-Genotype_flip_sp_extraction <- function(genofile,variant.id,sample.id,
+Genotype_flip_sp_extraction <- function(chr,genofile,variant.id,sample.id,
                                         REF_AF,rare_maf_cutoff=0.01,
                                         variant_maf_cutoff_filter=1,
                                         Missing_rate,Missing_cutoff=0.01,
@@ -125,14 +126,13 @@ Genotype_flip_sp_extraction <- function(genofile,variant.id,sample.id,
       Geno_dosage <- cbind(Geno_dosage,Geno_dosage_temp)
       gc()
       
-      CHR.dosage <- as.numeric(seqGetData(genofile, "chromosome"))
       position.dosage <- as.numeric(seqGetData(genofile, "position"))
       REF.dosage <- as.character(seqGetData(genofile, "$ref"))
       ALT.dosage <- as.character(seqGetData(genofile, "$alt"))
       variant.id.in.dosage <- seqGetData(genofile, "variant.id")
       qc_label.dosage <- as.character(seqGetData(genofile, QC_label))
       
-      results_dosage_temp <- data.frame(CHR=CHR.dosage,position=position.dosage,
+      results_dosage_temp <- data.frame(CHR=chr,position=position.dosage,
                                         REF=REF.dosage,ALT=ALT.dosage,
                                         variant.id=variant.id.in.dosage,
                                         qc_label=qc_label.dosage)
@@ -196,14 +196,13 @@ Genotype_flip_sp_extraction <- function(genofile,variant.id,sample.id,
       Geno_dosage_alt <- cbind(Geno_dosage_alt,Geno_dosage_alt_temp)
       gc()
       
-      CHR.dosage_alt <- as.numeric(seqGetData(genofile, "chromosome"))
       position.dosage_alt <- as.numeric(seqGetData(genofile, "position"))
       REF.dosage_alt <- as.character(seqGetData(genofile, "$ref"))
       ALT.dosage_alt <- as.character(seqGetData(genofile, "$alt"))
       variant.id.in.dosage_alt <- seqGetData(genofile, "variant.id")
       qc_label.dosage_alt <- as.character(seqGetData(genofile, QC_label))
       
-      results_dosage_alt_temp <- data.frame(CHR=CHR.dosage_alt,position=position.dosage_alt,
+      results_dosage_alt_temp <- data.frame(CHR=chr,position=position.dosage_alt,
                                             REF=REF.dosage_alt,ALT=ALT.dosage_alt,
                                             variant.id=variant.id.in.dosage_alt,
                                             qc_label=qc_label.dosage_alt)
@@ -261,7 +260,6 @@ Genotype_flip_sp_extraction <- function(genofile,variant.id,sample.id,
     Geno_dosage_sp <- seqGetData(genofile, "$dosage_sp")
     Geno_dosage_sp <- Geno_dosage_sp[id.genotype.match,,drop=FALSE]
     
-    CHR.dosage_sp <- as.numeric(seqGetData(genofile, "chromosome"))
     position.dosage_sp <- as.numeric(seqGetData(genofile, "position"))
     REF.dosage_sp <- as.character(seqGetData(genofile, "$ref"))
     ALT.dosage_sp <- as.character(seqGetData(genofile, "$alt"))
@@ -269,7 +267,7 @@ Genotype_flip_sp_extraction <- function(genofile,variant.id,sample.id,
     qc_label.dosage_sp <- as.character(seqGetData(genofile, QC_label))
     
     annotation_phred.sub_sp <- annotation_phred.sub[is.dosge_sp,,drop=FALSE]
-    results_dosage_sp <- data.frame(CHR=CHR.dosage_sp,position=position.dosage_sp,
+    results_dosage_sp <- data.frame(CHR=chr,position=position.dosage_sp,
                                     REF=REF.dosage_sp,ALT=ALT.dosage_sp,
                                     variant.id=variant.id.in.dosage_sp,
                                     qc_label=qc_label.dosage_sp)

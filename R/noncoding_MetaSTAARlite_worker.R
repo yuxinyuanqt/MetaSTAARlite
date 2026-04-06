@@ -232,7 +232,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,
@@ -373,7 +373,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,
@@ -508,7 +508,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,
@@ -685,7 +685,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,
@@ -858,7 +858,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,
@@ -1035,7 +1035,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,
@@ -1211,7 +1211,7 @@ noncoding_MetaSTAARlite_worker <- function(chr,gene_name,genofile,obj_nullmodel,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,

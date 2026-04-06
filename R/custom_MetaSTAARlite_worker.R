@@ -215,7 +215,7 @@ custom_MetaSTAARlite_worker <- function(chr,variant_list,agds_variant_list=NULL,
     REF_AF <- Missing_rate <- NULL
   }
   
-  Genotype_sp <- Genotype_flip_sp_extraction(genofile,variant.id=variant.id.is.in,
+  Genotype_sp <- Genotype_flip_sp_extraction(chr=chr,genofile,variant.id=variant.id.is.in,
                                              sample.id=phenotype.id,
                                              REF_AF=REF_AF,
                                              Missing_rate=Missing_rate,

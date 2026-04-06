@@ -507,7 +507,7 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     print("Q-Q plot")
     cex_point <- 1
 
-    png(paste0(output_path,"gene_centric_noncoding_qqplot.png"), width = 9, height = 9, units = 'in', res = 600)
+    png(paste0(output_path,"gene_centric_noncoding_qqplot.png"), width = 8, height = 8, units = 'in', res = 600)
 
     ### UTR
     ## remove unconverged p-values
@@ -518,12 +518,12 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     expected <- c(1:length(observed))
     lexp <- -(log10(expected / (length(expected)+1)))
 
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=0, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
     ### upstream
     ## remove unconverged p-values
@@ -535,12 +535,12 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     lexp <- -(log10(expected / (length(expected)+1)))
 
     par(new=T)
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=1, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
     ### downstream
     ## remove unconverged p-values
@@ -552,12 +552,12 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     lexp <- -(log10(expected / (length(expected)+1)))
 
     par(new=T)
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=2, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
     ### promoter_CAGE
     ## remove unconverged p-values
@@ -569,12 +569,12 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     lexp <- -(log10(expected / (length(expected)+1)))
 
     par(new=T)
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=3, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
     ### promoter_DHS
     ## remove unconverged p-values
@@ -586,12 +586,12 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     lexp <- -(log10(expected / (length(expected)+1)))
 
     par(new=T)
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=4, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
     ### enhancer_CAGE
     ## remove unconverged p-values
@@ -603,12 +603,12 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     lexp <- -(log10(expected / (length(expected)+1)))
 
     par(new=T)
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=5, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
     ### enhancer_DHS
     ## remove unconverged p-values
@@ -620,14 +620,14 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
     lexp <- -(log10(expected / (length(expected)+1)))
 
     par(new=T)
-    # par(mar=c(5,6,4,4))
+    par(mar=c(5,6,4,4))
     plot(lexp,lobs,pch=6, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_y),
          xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-         font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+         font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-    abline(0, 1, col="red",lwd=1)
+    abline(0, 1, col="red",lwd=2)
 
-    legend("topleft",legend=c("UTR","upstream","downstream","promoter_CAGE","promoter_DHS","enhancer_CAGE","enhancer_DHS"),ncol=1,bty="o",box.lwd=1,pch=0:6,cex=1,text.font=2)
+    legend("topleft",legend=c("UTR","upstream","downstream","promoter_CAGE","promoter_DHS","enhancer_CAGE","enhancer_DHS"),ncol=1,bty="o",box.lwd=1,pch=0:6,cex=1.5,text.font=2)
 
     dev.off()
   }
@@ -658,13 +658,15 @@ Gene_Centric_Noncoding_Results_Summary_meta <- function(gene_centric_noncoding_j
       min_ncRNA_y <- ceiling(-log10(ncRNA_minp)) + 1
 
       print("ncRNA Q-Q plot")
-      png(paste0(ncRNA_output_path,"gene_centric_ncRNA_qqplot.png"), width = 9, height = 9, units = 'in', res = 600)
+      png(paste0(ncRNA_output_path,"gene_centric_ncRNA_qqplot.png"), width = 8, height = 8, units = 'in', res = 600)
 
+      par(mar=c(5,6,4,4))
+      
       plot(lexp,lobs,pch=20, cex=cex_point, xlim = c(0, 5), ylim = c(0, min_ncRNA_y),
            xlab = expression(Expected ~ ~-log[10](italic(p))), ylab = expression(Observed ~ ~-log[10](italic(p))),
-           font.lab=2,cex.lab=1,cex.axis=1,font.axis=2)
+           font.lab=2,cex.lab=2,cex.axis=2,font.axis=2)
 
-      abline(0, 1, col="red",lwd=1)
+      abline(0, 1, col="red",lwd=2)
 
       dev.off()
     }
